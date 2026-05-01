@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBDHV - 2026</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            -webkit-text-size-adjust: none;
+            color: #000;
+        }
+
+        .main-wrapper {
+            max-width: 400px; 
+            width: 90%;
+            margin: 0 auto; 
+            padding-top: 40px;
+        }
+
+        #video-header {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            outline: none;
+            display: block;
+            /* 영상이 멈춰있을 때 첫 화면이 잘 보이도록 설정 */
+            background-color: #000;
+        }
+
+        #letter {
+            width: 100%;
+            line-height: 1.6;
+            padding-bottom: 100px;
+            word-break: keep-all;
+            font-size: 16px; 
+            text-align: left;
+        }
+
+        .salutation {
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .german-text {
+            white-space: pre-line;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .closing {
+            margin-top: 40px;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        .date {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 320px) {
+            #letter, .salutation, .german-text, .closing, .date {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div id="video-header">
+            <video id="myVideo" loop playsinline controls>
+                <source src="은행나무.mp4" type="video/quicktime">
+                <source src="은행나무.mp4" type="video/mp4">
+                이 브라우저는 비디오 태그를 지원하지 않습니다.
+            </video>
+        </div>
+
+        <div id="letter">
+            <div class="salutation">Liebes Zoryu,</div>
+
+            <div class="german-text">
+nach dem Unterricht wurde ich manchmal von ein paar Freunden aus der Klasse begleitet. Dabei fiel es mir jedes Mal schwer, mich auf den Baum zu konzentrieren. Nachdem sie gegangen waren, bin ich noch einmal zurückgegangen, um den Baum, der von Goethe gepflanzt wurde, in aller Ruhe zu fotografieren. 
+
+Zurzeit mache ich das jeden Tag, während ich auf den Sommer warte. Wenn sich die Blätter des Ginkgo-Baums entfalten, kommt der Sommer, in dem du Geburtstag hast.
+
+Ich schenke dir einen kleinen Fächer aus der Zeit der Dinosaurier.
+
+Alles Gute zum Geburtstag.
+            </div>
+
+            <div class="closing">
+                Deine Seohee
+            </div>
+            <div class="date">
+                Jena, den 02.05.2026
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        
+        // 재생 버튼을 눌렀을 때 소리가 50%로 나오도록 설정
+        video.volume = 0.5;
+    </script>
+
+</body>
+</html>

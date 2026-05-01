@@ -1,24 +1,98 @@
-<html>
-<head><title>HBDHV</title>
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBDHV</title>
+    <style>
+        /* 화면 기본 설정 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            overflow: hidden; 
+        }
 
+        /* 가로 기차 길 (스크롤 영역) */
+        .container {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto; 
+            overflow-y: hidden;
+            width: 100vw;
+            height: 100vh;
+            
+            /* [기본: 웹] 상단 여백 20px */
+            padding-top: 20px; 
+            padding-left: 50px;
+            padding-right: 50px;
+            
+            white-space: nowrap;
+            box-sizing: border-box;
+            align-items: flex-start; /* 웹에서는 상단 정렬 */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* [추가] 모바일 대응 스타일 */
+        @media (max-width: 430px) {
+            .container {
+                /* 모바일에서는 상단 여백을 없애고 세로 정중앙 정렬 */
+                padding-top: 0;
+                align-items: center; 
+                padding-left: 30px; /* 모바일 여백 살짝 조정 */
+                padding-right: 30px;
+            }
+            
+            .container img {
+                /* 모바일 화면에 맞춰 이미지 크기 조절 (너무 크면 잘리니까요) */
+                width: 300px !important; 
+            }
+        }
+
+        /* 이미지 스타일 */
+        .container a {
+            display: inline-block;
+            flex: 0 0 auto;
+            margin-right: 20px; 
+        }
+
+        .container img {
+            width: 500px;
+            height: auto;
+            display: block;
+        }
+
+        /* 스크롤바 디자인 */
+        .container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .container::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+<body>
 
+<div class="container">
+    <a href="password 2026.html">
+        <img src="나무.jpg" alt="2026 나무">
+    </a>
 
-<a href="password.html">
-    <img src="크로바.jpg" width="500px"></div></a>  
-    
+    <a href="password 2025.html">
+        <img src="정류장.jpg" alt="2025 정류장">
+    </a>
+
     <a href="password 2024.html">
-        <img src="광명.jpg" width="500px"></div></a>
+        <img src="광명.jpg" alt="2024 광명">
+    </a>
 
-        <a href="password 2025.html">
-            <img src="정류장.jpg" width="500px"></div></a>
-<style>
-#letter{width: 660px;height: 100px; line-height:30px; margin: auto;
-}
-
-
-
+    <a href="password.html">
+        <img src="크로바.jpg" alt="2023 크로바">
+    </a>
 </div>
+
 </body>
 </html>
